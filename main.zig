@@ -5,18 +5,17 @@ const c = @cImport({
 
 const std = @import("std");
 const warn = std.log.warn;
-const panic = std.debug.panic;
-
-const colors: [9]f32 = .{
-    1.0,  0.0,  0.0,
-    0.0,  1.0,  0.0,
-    0.0,  0.0,  1.0,
-};
 
 const points: [9]f32 = .{
     0.0,  0.5,  0.0,
     0.5, -0.5,  0.0,
    -0.5, -0.5,  0.0,
+};
+
+const colors: [9]f32 = .{
+    1.0,  0.0,  0.0,
+    0.0,  1.0,  0.0,
+    0.0,  0.0,  1.0,
 };
 
 const vertex_file = @embedFile("triangle.v.glsl");
